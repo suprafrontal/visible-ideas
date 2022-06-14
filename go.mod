@@ -2,18 +2,19 @@ module github.com/suprafrontal/visibleIdeas
 
 go 1.18
 
-require github.com/alimoeeny/ideas v0.1.51
+require (
+	github.com/alimoeeny/ideas v0.1.62
+	github.com/onsi/gomega v1.19.0
+)
 
 require (
 	cloud.google.com/go v0.100.2 // indirect
 	cloud.google.com/go/compute v1.5.0 // indirect
 	cloud.google.com/go/datastore v1.6.0 // indirect
-	github.com/alimoeeny/ali_utils v0.1.0 // indirect
 	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da // indirect
 	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/google/go-cmp v0.5.7 // indirect
 	github.com/googleapis/gax-go/v2 v2.2.0 // indirect
-	github.com/onsi/gomega v1.19.0 // indirect
 	go.opencensus.io v0.23.0 // indirect
 	golang.org/x/net v0.0.0-20220325170049-de3da57026de // indirect
 	golang.org/x/oauth2 v0.0.0-20220309155454-6242fa91716a // indirect

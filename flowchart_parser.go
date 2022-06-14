@@ -3,11 +3,13 @@ package visibleIdeas
 import (
 	"encoding/json"
 	"fmt"
+
+	"github.com/alimoeeny/ideas"
 )
 
 type Identifier struct {
-	ID     string
-	Source string
+	ID     string `json:"id,omitempty"`
+	Source string `json:"source,omitempty"`
 }
 
 type NodeType string
@@ -28,8 +30,8 @@ const (
 )
 
 type ComputeNodeFunctionalityParam struct {
-	Value interface{}
-	Units string
+	Value interface{} `json:"value,omitempty"`
+	Units ideas.Unit  `json:"units,omitempty"`
 }
 
 type NodePosition struct {
@@ -38,17 +40,17 @@ type NodePosition struct {
 }
 
 type NodeData struct {
-	Label     string `json:"label,omitempty"`
-	Short     string
-	Weight    float64
+	Label     string  `json:"label,omitempty"`
+	Short     string  `json:"short,omitempty"`
+	Weight    float64 `json:"weight,omitempty"`
 	Operation struct {
-		Title         string
-		Functionality ComputeNodeFunctionality
-		params        []ComputeNodeFunctionalityParam
-	}
-	Energized  string `json:"energized,omitempty"`
-	NodeID     string
-	Identifier Identifier
+		Title         string                          `json:"title,omitempty"`
+		Functionality ComputeNodeFunctionality        `json:"functionality,omitempty"`
+		Params        []ComputeNodeFunctionalityParam `json:"params,omitempty"`
+	} `json:"operation,omitempty"`
+	Energized  string     `json:"energized,omitempty"`
+	NodeID     string     `json:"node_id,omitempty"`
+	Identifier Identifier `json:"identifier,omitempty"`
 }
 
 type Node struct {
