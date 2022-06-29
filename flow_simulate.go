@@ -1,5 +1,5 @@
 package visibleIdeas
 
-func RunFlow(flow DiagnosisFlow, input interface{}) interface{} {
-	return nil
+func RunFlow(flow DiagnosisFlow, input interface{}) (interface{}, error) {
+	return nil, nil
 }
